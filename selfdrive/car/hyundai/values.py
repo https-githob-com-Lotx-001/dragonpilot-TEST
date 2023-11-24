@@ -1145,6 +1145,27 @@ FW_VERSIONS = {
       b'\xf1\x00bcsh8p54  E21\x00\x00\x00\x00\x00\x00\x00SCK0T33NB0\x88\xa2\xe6\xf0',
     ],
   },
+  CAR.KIA_CADENZA: {
+    (Ecu.fwdCamera, 0x7c4, None): [
+      b'\xf1\x00YG MFC  1.00 1.01 95740F6100 170717',
+      b'\xf1\x00YG MFC  1.00 1.03 95740F6200 190605',
+    ],
+    (Ecu.fwdRadar, 0x7d0, None): [
+      b'\xf1\x00YG__ SCC F_CUP   1.01 1.01 96400F6000     \xf1\xa01.01',
+      b'\xf1\x00YG__ SCC F_CUP   1.01 1.02 96400F6000     \xf1\xa01.02',
+      b'\xf1\x00YG__ SCC F_CUP   1.00 1.01 99110F6000     \xf1\xa01.01',
+    ],
+    (Ecu.abs, 0x7d1, None): [
+      b'\xf1\x8758920-F6230\xf1\000NC MGH \t 101\031\t\005 58920F6230\xf1\xa01.01',
+    ],
+    (Ecu.eps, 0x7d4, None): [
+      b'\xf1\x00YG  MDPS C 1.00 1.00 99800F6563\x00 4YGAC100',
+      b'\xf1\x00YG  MDPS C 1.00 1.00 E0000F6563\x00 4YGSC100',
+      b'\xf1\x00YG  MDPS C 1.01 99500F6563\x00 4YGDC103',
+      b'\xf1\x00YG  MDPS C 1.00 1.01 56310F6350\x00 4YG7C101',
+      b'\xf1\x00YG  MDPS C 1.00 1.01 99600G8563\x00 41G8C101',
+    ],
+  },
   CAR.KIA_STINGER_2022: {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00CK__ SCC F-CUP      1.00 1.00 99110-J5500         ',
