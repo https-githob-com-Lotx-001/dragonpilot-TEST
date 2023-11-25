@@ -76,7 +76,7 @@ class HyundaiFlags(IntFlag):
 
 class CAR(StrEnum):
   # Hyundai
-  AZERA_CLASSIC = "HYUNDAI AZERA CLASSIC 2023-24"
+  AZERA_CLASSIC = "HYUNDAI AZERA CLASSIC GEN 2023-24"
   AZERA_6TH_GEN = "HYUNDAI AZERA 6TH GEN"
   AZERA_HEV_6TH_GEN = "HYUNDAI AZERA HYBRID 6TH GEN"
   ELANTRA = "HYUNDAI ELANTRA 2017"
@@ -168,7 +168,7 @@ class HyundaiCarInfo(CarInfo):
 
 
 CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
-  CAR.AZERA_CLASSIC: HyundaiCarInfo("Hyundai Azera 2024", "All", car_parts=CarParts.common([CarHarness.hyundai_a])),
+  CAR.AZERA_CLASSIC: HyundaiCarInfo("Hyundai Azera Classic 2024", "All", car_parts=CarParts.common([CarHarness.hyundai_k])),
   CAR.AZERA_6TH_GEN: HyundaiCarInfo("Hyundai Azera 2022", "All", car_parts=CarParts.common([CarHarness.hyundai_k])),
   CAR.AZERA_HEV_6TH_GEN: HyundaiCarInfo("Hyundai Azera Hybrid 2020", "All", car_parts=CarParts.common([CarHarness.hyundai_k])),
   CAR.ELANTRA: [
@@ -547,6 +547,23 @@ FW_QUERY_CONFIG = FwQueryConfig(
 )
 
 FW_VERSIONS = {
+  CAR.AZERA_AZERA_CLASSIC: {
+    (Ecu.fwdRadar, 0x7d0, None): [
+      b'\xf1\x00IG__ SCC F-CU-      1.00 1.00 99110-G8100         ',
+    ],
+    (Ecu.eps, 0x7d4, None): [
+      b'\xf1\x00IG  MDPS C 1.00 1.02 56310G8510\x00 4IGSC103',
+    ],
+    (Ecu.fwdCamera, 0x7c4, None): [
+      b'\xf1\x00IG  MFC  AT MES LHD 1.00 1.04 99211-G8100 200511',
+    ],
+    (Ecu.transmission, 0x7e1, None): [
+      b'\xf1\x00bcsh8p54  U912\x00\x00\x00\x00\x00\x00SIG0M35MH0\xa4 |.',
+    ],
+    (Ecu.engine, 0x7e0, None): [
+      b'\xf1\x81641KA051\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
+  },
   CAR.AZERA_6TH_GEN: {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00IG__ SCC F-CU-      1.00 1.00 99110-G8100         ',
