@@ -547,7 +547,7 @@ FW_QUERY_CONFIG = FwQueryConfig(
 )
 
 FW_VERSIONS = {
-  CAR.AZERA_AZERA_CLASSIC: {
+  CAR.AZERA_CLASSIC: {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00IG__ SCC F-CU-      1.00 1.00 99110-G8100         ',
     ],
