@@ -76,6 +76,7 @@ class HyundaiFlags(IntFlag):
 
 class CAR(StrEnum):
   # Hyundai
+  AZERA_CLASSIC = "HYUNDAI AZERA CLASSIC 2023-24"
   AZERA_6TH_GEN = "HYUNDAI AZERA 6TH GEN"
   AZERA_HEV_6TH_GEN = "HYUNDAI AZERA HYBRID 6TH GEN"
   ELANTRA = "HYUNDAI ELANTRA 2017"
@@ -167,6 +168,7 @@ class HyundaiCarInfo(CarInfo):
 
 
 CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
+  CAR.AZERA_CLASSIC: HyundaiCarInfo("Hyundai Azera 2024", "All", car_parts=CarParts.common([CarHarness.hyundai_a])),
   CAR.AZERA_6TH_GEN: HyundaiCarInfo("Hyundai Azera 2022", "All", car_parts=CarParts.common([CarHarness.hyundai_k])),
   CAR.AZERA_HEV_6TH_GEN: HyundaiCarInfo("Hyundai Azera Hybrid 2020", "All", car_parts=CarParts.common([CarHarness.hyundai_k])),
   CAR.ELANTRA: [
@@ -2139,7 +2141,7 @@ CAN_GEARS = {
 }
 
 CANFD_CAR = {CAR.KIA_EV6, CAR.IONIQ_5, CAR.IONIQ_6, CAR.TUCSON_4TH_GEN, CAR.TUCSON_HYBRID_4TH_GEN, CAR.KIA_SPORTAGE_HYBRID_5TH_GEN,
-             CAR.SANTA_CRUZ_1ST_GEN, CAR.KIA_SPORTAGE_5TH_GEN, CAR.GENESIS_GV70_1ST_GEN, CAR.KIA_SORENTO_PHEV_4TH_GEN,
+             CAR.SANTA_CRUZ_1ST_GEN, CAR.KIA_SPORTAGE_5TH_GEN, CAR.GENESIS_GV70_1ST_GEN, CAR.AZERA_CLASSIC, CAR.KIA_SORENTO_PHEV_4TH_GEN,
              CAR.GENESIS_GV60_EV_1ST_GEN, CAR.KIA_SORENTO_4TH_GEN, CAR.KIA_NIRO_HEV_2ND_GEN, CAR.KIA_NIRO_EV_2ND_GEN,
              CAR.GENESIS_GV80, CAR.KIA_CARNIVAL_4TH_GEN, CAR.KIA_SORENTO_HEV_4TH_GEN, CAR.KONA_EV_2ND_GEN, CAR.KIA_K8_GEN, CAR.KIA_K8_HEV_1ST_GEN}
 
@@ -2229,6 +2231,7 @@ DBC = {
   CAR.IONIQ_5: dbc_dict('hyundai_canfd', None),
   CAR.IONIQ_6: dbc_dict('hyundai_canfd', None),
   CAR.SANTA_CRUZ_1ST_GEN: dbc_dict('hyundai_canfd', None),
+  CAR.AZERA_CLASSIC: dbc_dict('hyundai_canfd', None),
   CAR.KIA_SPORTAGE_5TH_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_SPORTAGE_HYBRID_5TH_GEN: dbc_dict('hyundai_canfd', None),
   CAR.GENESIS_GV70_1ST_GEN: dbc_dict('hyundai_canfd', None),
