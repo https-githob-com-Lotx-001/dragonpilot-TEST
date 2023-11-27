@@ -67,7 +67,7 @@ class CarInterface(CarInterfaceBase):
     if candidate in (CAR.AZERA_6TH_GEN, CAR.AZERA_HEV_6TH_GEN):
       ret.mass = 1600. if candidate == CAR.AZERA_6TH_GEN else 1675.  # ICE is ~average of 2.5L and 3.5L
       ret.wheelbase = 2.885
-      ret.steerRatio = 14.5
+      ret.steerRatio = 14.4/1 * 2.71
     elif candidate == CAR.AZERA_CLASSIC:
       ret.mass = 1860.
       ret.wheelbase = 2.855
@@ -209,7 +209,7 @@ class CarInterface(CarInterfaceBase):
     elif candidate == CAR.KIA_CADENZA:
       ret.mass = 1680.
       ret.wheelbase = 2.855
-      ret.steerRatio = 14.4/1 * 2.21
+      ret.steerRatio = 14.4/1 * 2.71
     elif candidate == CAR.KIA_SPORTAGE_HYBRID_5TH_GEN:
       ret.mass = 1767.  # SX Prestige trim support only
       ret.wheelbase = 2.756
