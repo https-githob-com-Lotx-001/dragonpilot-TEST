@@ -137,6 +137,7 @@ class CAR(StrEnum):
   KIA_STINGER = "KIA STINGER GT2 2018"
   KIA_STINGER_2022 = "KIA STINGER 2022"
   KIA_CEED = "KIA CEED INTRO ED 2019"
+  KIA_CADENZA_20 = "KIA CADENZA YG 2020-21"
   KIA_CADENZA = "KIA CADENZA YG GDI 3.3 2017-20"
   KIA_EV6 = "KIA EV6 2022"
   KIA_CARNIVAL_4TH_GEN = "KIA CARNIVAL 4TH GEN"
@@ -1502,6 +1503,17 @@ FW_VERSIONS = {
       b'\xf1\x00YG  MDPS C 1.00 1.01 99600G8563\x00 41G8C101',
     ],
   },
+  CAR.KIA_CADENZA_20: {
+    (Ecu.fwdRadar, 0x7d0, None): [
+      b'\xf1\x00YG__ SCC F-CU-      1.00 1.00 99110-F6000         ',
+    ],
+    (Ecu.eps, 0x7d4, None): [
+      b'\xf1\x00IG  MDPS C 1.00 1.02 56310G8510\x00 4IGSC103',
+    ],
+    (Ecu.fwdCamera, 0x7c4, None): [
+      b'\xf1\x00YG  MFC  AT MES LHD 1.00 1.05 99211-F6000 200926',
+    ],
+  },
   CAR.KIA_K5_HEV_2020: {
     (Ecu.fwdRadar, 0x7D0, None): [
       b'\xf1\x00DLhe SCC FHCUP      1.00 1.02 99110-L7000         ',
@@ -2158,7 +2170,7 @@ CAN_GEARS = {
 }
 
 CANFD_CAR = {CAR.KIA_EV6, CAR.IONIQ_5, CAR.IONIQ_6, CAR.TUCSON_4TH_GEN, CAR.TUCSON_HYBRID_4TH_GEN, CAR.KIA_SPORTAGE_HYBRID_5TH_GEN,
-             CAR.SANTA_CRUZ_1ST_GEN, CAR.KIA_SPORTAGE_5TH_GEN, CAR.GENESIS_GV70_1ST_GEN, CAR.AZERA_CLASSIC, CAR.KIA_SORENTO_PHEV_4TH_GEN,
+             CAR.SANTA_CRUZ_1ST_GEN, CAR.KIA_SPORTAGE_5TH_GEN, CAR.GENESIS_GV70_1ST_GEN, CAR.AZERA_CLASSIC, CAR.KIA_CADENZA_20, CAR.KIA_SORENTO_PHEV_4TH_GEN,
              CAR.GENESIS_GV60_EV_1ST_GEN, CAR.KIA_SORENTO_4TH_GEN, CAR.KIA_NIRO_HEV_2ND_GEN, CAR.KIA_NIRO_EV_2ND_GEN,
              CAR.GENESIS_GV80, CAR.KIA_CARNIVAL_4TH_GEN, CAR.KIA_SORENTO_HEV_4TH_GEN, CAR.KONA_EV_2ND_GEN, CAR.KIA_K8_GEN, CAR.KIA_K8_HEV_1ST_GEN}
 
@@ -2244,6 +2256,7 @@ DBC = {
   CAR.KIA_EV6: dbc_dict('hyundai_canfd', None),
   CAR.SONATA_HYBRID: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar_generated'),
   CAR.TUCSON_4TH_GEN: dbc_dict('hyundai_canfd', None),
+  CAR.KIA_CADENZA_20: dbc_dict('hyundai_canfd', None),
   CAR.TUCSON_HYBRID_4TH_GEN: dbc_dict('hyundai_canfd', None),
   CAR.IONIQ_5: dbc_dict('hyundai_canfd', None),
   CAR.IONIQ_6: dbc_dict('hyundai_canfd', None),
