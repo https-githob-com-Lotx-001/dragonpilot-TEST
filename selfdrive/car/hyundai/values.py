@@ -1484,8 +1484,9 @@ FW_VERSIONS = {
   },
   CAR.KIA_CADENZA: {
     (Ecu.fwdCamera, 0x7c4, None): [
-      b'\xf1\x00YG MFC  1.00 1.01 95740F6100 170717',
-      b'\xf1\x00YG MFC  1.00 1.03 95740F6200 190605',
+      b'\xf1\x00YG  MFC  1.00 1.01 95740F6100 170717',
+      b'\xf1\x00YG  MFC  LKAS USA 1.00 1.03 95740F6200 230121',
+      b'\xf1\x00YG  MFC  1.00 1.03 95740F6200 190605',
     ],
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00YG__ SCC F_CUP   1.01 1.01 96400F6000     \xf1\xa01.01',
