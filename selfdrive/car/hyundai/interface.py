@@ -61,7 +61,7 @@ class CarInterface(CarInterfaceBase):
         ret.flags |= HyundaiFlags.USE_FCA.value
 
     ret.steerActuatorDelay = 0.1  # Default delay
-    ret.steerLimitTimer = 0.4
+    ret.steerLimitTimer = 1.0
     CarInterfaceBase.configure_torque_tune(candidate, ret.lateralTuning)
 
     if candidate in (CAR.AZERA_6TH_GEN, CAR.AZERA_HEV_6TH_GEN):
@@ -213,7 +213,7 @@ class CarInterface(CarInterfaceBase):
     elif candidate == CAR.KIA_CADENZA:
       ret.mass = 1680.
       ret.wheelbase = 2.855
-      ret.steerRatio = 19.512 * 2.71
+      ret.steerRatio = 12.5 * 2.71
     elif candidate == CAR.KIA_SPORTAGE_HYBRID_5TH_GEN:
       ret.mass = 1767.  # SX Prestige trim support only
       ret.wheelbase = 2.756
