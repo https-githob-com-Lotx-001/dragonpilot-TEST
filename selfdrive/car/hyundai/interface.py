@@ -208,11 +208,11 @@ class CarInterface(CarInterfaceBase):
       ret.tireStiffnessFactor = 0.65
     elif candidate == CAR.KIA_CADENZA_20:
       ret.mass = 2140.
-      ret.wheelbase = 2.855
-      ret.steerRatio = 14.4/1 * 2.71 
+      ret.wheelbase = 2.845
+      ret.steerRatio = 12.5 * 2.71 
     elif candidate == CAR.KIA_CADENZA:
       ret.mass = 1680.
-      ret.wheelbase = 2.855
+      ret.wheelbase = 2.845
       ret.steerRatio = 12.5 * 2.71
     elif candidate == CAR.KIA_SPORTAGE_HYBRID_5TH_GEN:
       ret.mass = 1767.  # SX Prestige trim support only
