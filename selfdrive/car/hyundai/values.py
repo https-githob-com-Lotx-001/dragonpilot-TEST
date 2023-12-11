@@ -1503,6 +1503,12 @@ FW_VERSIONS = {
       b'\xf1\x00YG  MDPS C 1.00 1.01 56310-F6350\x00 4YG7C101',
       b'\xf1\x00YG  MDPS C 1.00 1.01 99600-G8563\x00 41G8C101',
     ],
+    (Ecu.transmission, 0x7e1, None): [
+      b'\xf1\x00bcshcm49  A0572\x00\x00\x00\x00\x00\x00TYG0G33US4\xa4 |.',
+    ],
+    (Ecu.engine, 0x7e0, None): [
+      b'\xf1\x8164096051\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
   },
   CAR.KIA_CADENZA_20: {
     (Ecu.fwdRadar, 0x7d0, None): [
